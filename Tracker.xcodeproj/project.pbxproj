@@ -14,6 +14,7 @@
 		77B813562D3644D3004AC43D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B813552D3644D3004AC43D /* Assets.xcassets */; };
 		77B813592D3644D3004AC43D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 77B813582D3644D3004AC43D /* Base */; };
 		77B8135C2D3644D3004AC43D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B8135B2D3644D3004AC43D /* main.m */; };
+		77B813752D3646BE004AC43D /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B813742D3646BE004AC43D /* APIClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,11 @@
 		77B813582D3644D3004AC43D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77B8135A2D3644D3004AC43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B8135B2D3644D3004AC43D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		77B813732D3646BE004AC43D /* APIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		77B813742D3646BE004AC43D /* APIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		77B813762D3646E3004AC43D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		77B813772D364742004AC43D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		77B813782D36474F004AC43D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +74,113 @@
 				77B8134F2D3644D1004AC43D /* ViewController.h */,
 				77B813502D3644D1004AC43D /* ViewController.m */,
 				77B813522D3644D1004AC43D /* Main.storyboard */,
-				77B813552D3644D3004AC43D /* Assets.xcassets */,
 				77B813572D3644D3004AC43D /* LaunchScreen.storyboard */,
 				77B8135A2D3644D3004AC43D /* Info.plist */,
 				77B8135B2D3644D3004AC43D /* main.m */,
+				77B813672D364639004AC43D /* Resources */,
+				77B8136B2D364665004AC43D /* Classes */,
+				77B8136A2D36465C004AC43D /* Networking */,
+				77B813682D36464E004AC43D /* ThirdParty */,
+				77B813692D364655004AC43D /* Config */,
 			);
 			path = Tracker;
+			sourceTree = "<group>";
+		};
+		77B813672D364639004AC43D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77B813552D3644D3004AC43D /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		77B813682D36464E004AC43D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				77B813762D3646E3004AC43D /* README.md */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		77B813692D364655004AC43D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				77B813782D36474F004AC43D /* Debug.xcconfig */,
+				77B813772D364742004AC43D /* Release.xcconfig */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		77B8136A2D36465C004AC43D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				77B813732D3646BE004AC43D /* APIClient.h */,
+				77B813742D3646BE004AC43D /* APIClient.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		77B8136B2D364665004AC43D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				77B813722D3646AE004AC43D /* Extensions */,
+				77B813712D3646A7004AC43D /* Helpers */,
+				77B813702D3646A1004AC43D /* Services */,
+				77B8136F2D364697004AC43D /* ViewModels */,
+				77B8136E2D36468E004AC43D /* Controllers */,
+				77B8136D2D364684004AC43D /* Views */,
+				77B8136C2D36467A004AC43D /* Models */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		77B8136C2D36467A004AC43D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		77B8136D2D364684004AC43D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		77B8136E2D36468E004AC43D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		77B8136F2D364697004AC43D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		77B813702D3646A1004AC43D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		77B813712D3646A7004AC43D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		77B813722D3646AE004AC43D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B813752D3646BE004AC43D /* APIClient.m in Sources */,
 				77B813512D3644D1004AC43D /* ViewController.m in Sources */,
 				77B8134B2D3644D1004AC43D /* AppDelegate.m in Sources */,
 				77B8135C2D3644D3004AC43D /* main.m in Sources */,
