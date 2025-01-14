@@ -1,0 +1,12 @@
+# XCode build files
+build/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+
+# XCode private settings
+*.xcuserstate
+project.xcworkspace/
