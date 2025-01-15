@@ -7,6 +7,8 @@
 
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
+//#import "QMUIConfigurationTemplate.h"
+
 
 @interface AppDelegate ()
 
@@ -26,6 +28,9 @@
      
      [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
+    
+    // 初始化 QMUI 主题配置
+//    [QMUIConfigurationTemplate setupConfigurationTemplate];
     return YES;
 }
 

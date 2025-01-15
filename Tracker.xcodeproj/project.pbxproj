@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55ECC18B24E8D8523858F539 /* Pods_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE65E473174FD0FD04249340 /* Pods_Tracker.framework */; };
+		77A5FB212D37876D00BF6935 /* QMUIConfigurationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A5FB1F2D37876D00BF6935 /* QMUIConfigurationTemplate.m */; };
 		77B8134B2D3644D1004AC43D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B8134A2D3644D1004AC43D /* AppDelegate.m */; };
 		77B8134E2D3644D1004AC43D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B8134D2D3644D1004AC43D /* SceneDelegate.m */; };
 		77B813542D3644D1004AC43D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 77B813532D3644D1004AC43D /* Base */; };
@@ -22,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B62F3C8760479234AB62E5E /* Pods-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker.release.xcconfig"; path = "Target Support Files/Pods-Tracker/Pods-Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		417B207A098A86FA38FF072E /* Pods-Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Tracker/Pods-Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		77A5FB1E2D37876D00BF6935 /* QMUIConfigurationTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMUIConfigurationTemplate.h; sourceTree = "<group>"; };
+		77A5FB1F2D37876D00BF6935 /* QMUIConfigurationTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMUIConfigurationTemplate.m; sourceTree = "<group>"; };
 		77B813462D3644D1004AC43D /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B813492D3644D1004AC43D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77B8134A2D3644D1004AC43D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 		77B813932D364A40004AC43D /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		77B8139B2D364BDD004AC43D /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		77B8139C2D364BDD004AC43D /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		BE65E473174FD0FD04249340 /* Pods_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,17 +61,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55ECC18B24E8D8523858F539 /* Pods_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		568549903A6855836BDFA368 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				417B207A098A86FA38FF072E /* Pods-Tracker.debug.xcconfig */,
+				1B62F3C8760479234AB62E5E /* Pods-Tracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		77A5FB202D37876D00BF6935 /* QMUIConfigurationTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				77A5FB1E2D37876D00BF6935 /* QMUIConfigurationTemplate.h */,
+				77A5FB1F2D37876D00BF6935 /* QMUIConfigurationTemplate.m */,
+			);
+			name = QMUIConfigurationTemplate;
+			path = Pods/QMUIKit/QMUIConfigurationTemplate;
+			sourceTree = SOURCE_ROOT;
+		};
 		77B8133D2D3644D1004AC43D = {
 			isa = PBXGroup;
 			children = (
 				77B813472D3644D1004AC43D /* Products */,
 				77B813482D3644D1004AC43D /* Tracker */,
+				568549903A6855836BDFA368 /* Pods */,
+				D326CE7BE939C0971D96D0FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +136,7 @@
 		77B813682D36464E004AC43D /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				77A5FB202D37876D00BF6935 /* QMUIConfigurationTemplate */,
 				77B813762D3646E3004AC43D /* README.md */,
 			);
 			path = ThirdParty;
@@ -243,6 +273,14 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		D326CE7BE939C0971D96D0FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE65E473174FD0FD04249340 /* Pods_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,9 +288,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77B8135F2D3644D3004AC43D /* Build configuration list for PBXNativeTarget "Tracker" */;
 			buildPhases = (
+				5B55A14393EA4C2732E5133A /* [CP] Check Pods Manifest.lock */,
 				77B813422D3644D1004AC43D /* Sources */,
 				77B813432D3644D1004AC43D /* Frameworks */,
 				77B813442D3644D1004AC43D /* Resources */,
+				8ADB11A688A3E87CA58F6E2B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,6 +348,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B55A14393EA4C2732E5133A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ADB11A688A3E87CA58F6E2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tracker/Pods-Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tracker/Pods-Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tracker/Pods-Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		77B813422D3644D1004AC43D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -315,6 +397,7 @@
 			files = (
 				77B813752D3646BE004AC43D /* APIClient.m in Sources */,
 				77B8139D2D364BDD004AC43D /* BaseViewController.m in Sources */,
+				77A5FB212D37876D00BF6935 /* QMUIConfigurationTemplate.m in Sources */,
 				77B813962D364A40004AC43D /* DiscoverViewController.m in Sources */,
 				77B813992D364A40004AC43D /* MainTabBarController.m in Sources */,
 				77B813982D364A40004AC43D /* ProfileViewController.m in Sources */,
@@ -467,12 +550,27 @@
 		};
 		77B813602D3644D3004AC43D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 417B207A098A86FA38FF072E /* Pods-Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T5CG98P673;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PODS_ROOT)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/QMUIKit\"",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/QMUIKit\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -480,6 +578,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,12 +593,21 @@
 		};
 		77B813612D3644D3004AC43D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B62F3C8760479234AB62E5E /* Pods-Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T5CG98P673;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PODS_ROOT)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/QMUIKit\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -507,6 +615,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
