@@ -10,6 +10,7 @@ target 'Tracker' do
 
   # Pods for Tracker
   pod 'QMUIKit'
+ pod 'MJRefresh'
   pod 'AFNetworking'
   pod 'Masonry'
 end

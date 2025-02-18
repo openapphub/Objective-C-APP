@@ -5,8 +5,14 @@
 //  Created by jin xm on 2025/1/14.
 //
 
+#import <QMUIKit/QMUIKit.h>
 #import "AppDelegate.h"
+#import "BaseNavigationController.h"
+#import "BaseViewController.h"
+#import "LoginViewController.h"
 #import "MainTabBarController.h"
+#import "NetworkManager.h"
+
 //#import "QMUIConfigurationTemplate.h"
 
 
@@ -18,22 +24,55 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // 创建主窗口
-     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-     self.window.backgroundColor = [UIColor whiteColor];
-     
-     // 设置根视图控制器为TabBar控制器
-     MainTabBarController *tabBarController = [[MainTabBarController alloc] init];
-     self.window.rootViewController = tabBarController;
-     
-     [self.window makeKeyAndVisible];
-    // Override point for customization after application launch.
-    
-    // 初始化 QMUI 主题配置
-//    [QMUIConfigurationTemplate setupConfigurationTemplate];
+    // 初始化 MainTabBarController
+    MainTabBarController *tabBarController = [[MainTabBarController alloc] init];
+
+    // 设置网络管理器
+    [self setupNetworkManager];
+
+    // 初始化 UIWindow
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    // 根据用户登录状态设置根视图控制器
+    if (self.setupCheckUserLogin) {
+        self.window.rootViewController = tabBarController;
+    } else {
+        UINavigationController *loginNavController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+        self.window.rootViewController = loginNavController;
+    }
+
+    // 显示窗口
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
+// 初始化设置接口请求配置
+- (void)setupNetworkManager {
+    [[NetworkManager sharedManager] setBaseURL:@"http://167.253.157.69:3810"];
+    [[NetworkManager sharedManager] setTimeoutInterval:60];
+    [[NetworkManager sharedManager] setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    // 从 NSUserDefaults 中读取 Token
+    NSString *jwtToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"JWTAuthToken"];
+
+    // 设置 Token 到 NetworkManager
+    if (jwtToken) {
+        [[NetworkManager sharedManager] setJWTToken:jwtToken];
+    }
+}
+
+// 检查用户登录状态
+- (Boolean)setupCheckUserLogin {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *username = [defaults objectForKey:@"username"];
+
+//       NSString *password = [defaults objectForKey:@"password"];
+    if (username) {
+        return true;
+    }
+
+    return false;
+}
 
 //#pragma mark - UISceneSession lifecycle
 //

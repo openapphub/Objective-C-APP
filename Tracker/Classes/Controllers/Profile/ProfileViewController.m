@@ -25,13 +25,7 @@
 }
 
 - (void)testRequestButtonTapped {
-    [self requestWithURL:@"https://api.example.com/test"
-                params:@{@"test": @"value"}
-               success:^(id response) {
-        NSLog(@"请求成功：%@", response);
-    } failure:^(NSError *error) {
-        NSLog(@"请求失败：%@", error);
-    }];
+    NSLog(@"请求");
 }
 
 @end

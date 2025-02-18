@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
+  - MJRefresh (3.7.6)
   - QMUIKit (4.6.0):
     - QMUIKit/QMUIComponents (= 4.6.0)
     - QMUIKit/QMUICore (= 4.6.0)
@@ -315,19 +316,22 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Masonry
+  - MJRefresh
   - QMUIKit
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - Masonry
+    - MJRefresh
     - QMUIKit
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
   QMUIKit: 6321cf1124623d686a9ec0a79a7cc59d0d64a52c
 
-PODFILE CHECKSUM: 88f2ea706fc0f668bae906490bfbfb29e4010970
+PODFILE CHECKSUM: 137a30511e343e69f650d923c645d24f2c7ac739
 
 COCOAPODS: 1.15.2
